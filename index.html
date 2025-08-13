@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Header Security Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HTTP Header Security Checker</h1>
+            <p>Check if a website has secure HTTP headers implemented correctly</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <form id="url-form">
+                    <div class="input-group">
+                        <input type="url" id="url-input" placeholder="Enter website URL (https://example.com)" required>
+                        <button type="submit" id="check-button">Check Headers</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="loading-section" id="loading-section">
+                <div class="spinner"></div>
+                <p>Analyzing headers...</p>
+            </section>
+
+            <section class="results-section" id="results-section">
+                <h2>Security Header Analysis</h2>
+                <div class="summary-box">
+                    <div class="score-container">
+                        <div class="score" id="score">0</div>
+                        <div class="score-label">Security Score</div>
+                    </div>
+                    <div class="summary-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="passed-count">0</span>
+                            <span class="stat-label">Passed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="warning-count">0</span>
+                            <span class="stat-label">Warnings</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="failed-count">0</span>
+                            <span class="stat-label">Failed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="headers-container" id="headers-container">
+                    <!-- Results will be populated here by JavaScript -->
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>About HTTP Security Headers</h2>
+                <p>HTTP security headers are a fundamental aspect of website security. They help protect against various attacks like XSS, clickjacking, and data injection.</p>
+                
+                <div class="header-info">
+                    <h3>Key Security Headers</h3>
+                    <ul>
+                        <li><strong>Content-Security-Policy (CSP)</strong>: Controls resources the browser is allowed to load</li>
+                        <li><strong>Strict-Transport-Security (HSTS)</strong>: Forces secure (HTTPS) connections</li>
+                        <li><strong>X-Content-Type-Options</strong>: Prevents MIME type sniffing</li>
+                        <li><strong>X-Frame-Options</strong>: Protects against clickjacking</li>
+                        <li><strong>Permissions-Policy</strong>: Controls browser features and APIs</li>
+                        <li><strong>Referrer-Policy</strong>: Controls information sent in the Referer header</li>
+                        <li><strong>X-XSS-Protection</strong>: Helps prevent cross-site scripting (XSS) attacks</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created by Abu Talha</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
