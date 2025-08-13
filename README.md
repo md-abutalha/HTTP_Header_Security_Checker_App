@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# HTTP_Header_Security_Checker_App
-HTTP Header Security Checker
-=======
+
 # HTTP Header Security Checker
 
 A web-based tool to check if a website has secure HTTP headers implemented correctly. This application helps identify missing or misconfigured security headers that are essential for protecting websites against various attacks.
@@ -80,4 +77,4 @@ MIT
 ## Author
 
 Abu Talha
->>>>>>> fd17eb3 (header security app commit - 1)
+
